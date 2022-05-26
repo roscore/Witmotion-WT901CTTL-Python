@@ -27,5 +27,5 @@ pip3 install pyserial # Use Python 3.x
 
 ```
 sudo chmod 666 /dev/ttyUSB0 # port
-rosrun Witmotion-WT901CTTL-ROS wt901cttl_node
+rosrun wt901cttl_ros WT901.py
 ```

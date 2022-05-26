@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <name>wt901cttl_ros</name>
+  <version>0.0.1</version>
+  <description>for using WIT-Motion's WT901CTTL</description>
+
+  <author email="roscore@kakao.com">Jun</author>
+
+  <maintainer email="roscore@kakao.com">Jun</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>serial</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <run_depend>serial</run_depend>
+  <run_depend>std_msgs</run_depend>
+
+</package>

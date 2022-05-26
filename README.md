@@ -2,6 +2,17 @@
 This is a Python code for Witmotion's WT901CTTL IMU sensor (Acceleromenter, Gyroscope, and Magnetometer)
 Welcome to my very first project. Ever. Feedback is welcomed. Also let me know if there are any problems. 
 
+## Dependancy
+* If you get some error like this : [Python] AttributeError: module 'serial' has no attribute 'Serial'
+* Use this commands for fixing error
+'''
+# Use Python 2.x
+pip install pyserial
+
+# Use Python 3.x
+pip3 install pyserial
+'''
+
 Some Important Notes:
 
 This code reads in data from Witmotion's WT901CTTL IMU sensor which can read acceleration, angular velocity, tilt angles, and magnetism(?). It has been tested to work on both Linux and Windows 11.

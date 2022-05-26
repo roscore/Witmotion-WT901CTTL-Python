@@ -7,17 +7,21 @@ import serial
 import time
 import numpy as np
 
+
 def process():
-	pub = rospy.Publisher('imu', Imu, queue_size=10)
 	rospy.init_node('wt901cttl_ros')
+	sensor_name = str(rospy.get_param('~sensor_name'))
+
+	pub = rospy.Publisher(str(sensor_name) + '/imu', Imu, queue_size=10)
+	
 	nh = rospy.Rate(400)
 
 	msg = Imu()
 
 	# Initial conditions
 	ser = serial.Serial()
-	ser.port = '/dev/ttyUSB0' #for linux. Also change the USB# to the correct # if necessary.
-	ser.baudrate = 9600
+	ser.port = str(rospy.get_param('~serial_port_name')) #for linux. Also change the USB# to the correct # if necessary.
+	ser.baudrate = int(rospy.get_param('~serial_baud_rate'))
 	ser.parity = 'N'
 	ser.bytesize = 8
 	ser.timeout = 1
@@ -142,6 +146,6 @@ def process():
 
 if __name__ == '__main__':
 	try:
-        	process()
-  	except rospy.ROSInterruptException:
-        	pass
+		process()
+	except rospy.ROSInterruptException:
+		pass

@@ -1,0 +1,10 @@
+<launch>
+
+    <node pkg="wt901cttl_ros" type="WT901.py" name="WT901_1" output="screen">
+
+        <param name="serial_port_name"      value="/dev/ttyUSB1" /> <!-- Name of serial port -->
+        <param name="serial_baud_rate"      value="9600" />  <!--Baudrate of serial port-->
+        <param name="senser_name"            value="front_left" />
+    </node>
+
+</launch>

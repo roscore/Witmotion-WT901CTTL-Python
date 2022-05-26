@@ -6,11 +6,11 @@ Welcome to my very first project. Ever. Feedback is welcomed. Also let me know i
 * If you get some error like this : [Python] AttributeError: module 'serial' has no attribute 'Serial'
 * Use this commands for fixing error
 
-'''
+```
 pip install pyserial # Use Python 2.x
 
 pip3 install pyserial # Use Python 3.x
-'''
+```
 
 Some Important Notes:
 
